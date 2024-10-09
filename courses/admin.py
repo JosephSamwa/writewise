@@ -36,7 +36,7 @@ class EnrollmentAdmin(admin.ModelAdmin):
             self.message_user(request, e.message, level=messages.ERROR)
 admin.site.register(Enrollment, EnrollmentAdmin)
 
-# Register other models
+#other models
 admin.site.register(Course)
 admin.site.register(Payment)
 
