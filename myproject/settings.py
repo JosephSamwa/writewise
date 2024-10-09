@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-%sj_+9mfzc(n=&@9pi#pf-04pl(=psj8zw_#sqolouc_a@am8y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']
 
 # Application definition
 INSTALLED_APPS = [
@@ -29,7 +29,6 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'users.CustomUser'
 
 LOGIN_URL = 'users:login'
-#LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_REDIRECT_URL = '/dashboard/'
 LOGOUT_REDIRECT_URL = '/'
 
@@ -65,8 +64,6 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -89,20 +86,20 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'samtech.websites@gmail.com'  
 EMAIL_HOST_PASSWORD = 'vwei whiv prqe fghx' 
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 LANGUAGE_CODE = 'en-us'
 
-PAYMENT_HOST= 'https://courses.vercel.app'
-STRIPE_PUBLIC_KEY= 'your-stripe-public-key'
-STRIPE_SECRET_KEY= 'your-stripe-secret-key'
+PAYMENT_HOST = 'https://courses.vercel.app'
+STRIPE_PUBLIC_KEY = 'your-stripe-public-key'
+STRIPE_SECRET_KEY = 'your-stripe-secret-key'
 
 TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
