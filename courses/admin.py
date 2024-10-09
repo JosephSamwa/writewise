@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.admin import UserAdmin
 from users.models import CustomUser
 from courses.models import Course, Enrollment  # Import models from courses app
-from payments.models import Payment  # Import models from payments app
+from payments.models import Paymenttt  # Import models from payments app
 
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
@@ -38,7 +38,7 @@ admin.site.register(Enrollment, EnrollmentAdmin)
 
 #other models
 admin.site.register(Course)
-admin.site.register(Payment)
+admin.site.register(Paymenttt)
 
 #custom headers
 admin.site.site_header = "WriteWise Admin Panel"
