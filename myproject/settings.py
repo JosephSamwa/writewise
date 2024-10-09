@@ -86,8 +86,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'samtech.websites@gmail.com'  # Replace with your email
-EMAIL_HOST_PASSWORD = 'vwei whiv prqe fghx'  # Replace with your email password
+EMAIL_HOST_USER = 'samtech.websites@gmail.com'  
+EMAIL_HOST_PASSWORD = 'vwei whiv prqe fghx' 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 LANGUAGE_CODE = 'en-us'
@@ -99,7 +99,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
