@@ -20,4 +20,4 @@ class UserProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'course')
     search_fields = ('user__username', 'course')
 
-@admin.register(Payment)
+admin.site.register(Paymenttt)
