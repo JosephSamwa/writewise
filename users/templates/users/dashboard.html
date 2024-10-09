@@ -1,0 +1,19 @@
+{% extends "courses/base_generic.html" %}
+{% load static %}
+
+{% block content %}
+<main>
+    <h1>Welcome, {{ user.username }}!</h1>
+    {% if enrollments %}
+        <h2>Your Enrollments</h2>
+        <ul>
+            {% for enrollment in enrollments %}
+                <li>{{ enrollment.course.title }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You are not enrolled in any courses at the moment.</p>
+    {% endif %}
+    <p>Debug: {{ enrollments }}</p>  <!-- Debug message -->
+</main>
+{% endblock %}
