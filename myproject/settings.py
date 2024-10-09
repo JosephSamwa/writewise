@@ -14,6 +14,8 @@ ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']
 
 # Application definition
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',# Add this before 'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -104,6 +106,7 @@ USE_TZ = True
 
 # Static files
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
