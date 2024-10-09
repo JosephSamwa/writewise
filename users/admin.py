@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import CustomUser, UserProfile
-from payments.models import Payment
+from payments.models import Paymenttt
 
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
