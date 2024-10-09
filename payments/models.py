@@ -33,19 +33,6 @@ class BasePayment(models.Model):
     def get_timestamp_as_int(self):
         return int(self.timestamp.timestamp())
 
-    def get_prep_value(self, value):
-        value = super().get_prep_value(value)
-        if value is None:
-            return None
-        try:
-            if isinstance(value, datetime.datetime):
-                return int(value.timestamp())
-            return int(value)
-        except (TypeError, ValueError) as e:
-            raise e.__class__(
-                "Field '%s' expected a number but got %r." % (self.name, value),
-            ) from e
-
 class PurchasedItem(models.Model):
     name = models.CharField(max_length=255)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='purchased_items')
@@ -65,9 +52,9 @@ class Payment(BasePayment):
     items = models.ManyToManyField('courses.Enrollment')  # Corrected ManyToManyField declaration
     transaction_id = models.CharField(max_length=100, unique=True, default=uuid.uuid4)
     phone_number = models.CharField(max_length=15, default='000-000-0000')
-    #transaction_date = models.DateTimeField(default=timezone.now)  # Added default value
     is_used = models.BooleanField(default=False)
     description = models.TextField()
+
     def __str__(self):
         return f"Payment of ${self.amount} for {self.course.title} by {self.user.username}"
 
