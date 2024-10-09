@@ -1,0 +1,7 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Payment Successful</h1>
+    <p>Thank you for your payment of {{ payment.amount }} {{ payment.currency }} for the course {{ payment.course.title }}.</p>
+<a href="{% url 'course_detail' payment.course.id %}">Go to Course</a>
+{% endblock %}

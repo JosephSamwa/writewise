@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Payment History</h1>
+{% if payments %}
+    <ul>
+    {% for payment in payments %}
+        <li>
+            {{ payment.timestamp|date }} - ${{ payment.amount }} for {{ payment.course.title }}
+            (Status: {{ payment.get_status_display }})
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>You haven't made any payments yet.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WriteWise Hub{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'courses:course_list' %}">Courses</a></li>
+                <li><a href="{% url 'courses:dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'courses:login' %}">Login</a></li>
+                <li><a href="{% url 'courses:logout' %}">Logout</a></li>
+                <li><a href="{% url 'courses:signup' %}">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        <!-- Content from other templates will be inserted here -->
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <p>© 2024 WriteWise Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
