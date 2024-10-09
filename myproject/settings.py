@@ -92,6 +92,10 @@ EMAIL_HOST_PASSWORD = 'vwei whiv prqe fghx'
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 LANGUAGE_CODE = 'en-us'
 
+PAYMENT_HOST=https://courses.vercel.app
+STRIPE_PUBLIC_KEY=your-stripe-public-key
+STRIPE_SECRET_KEY=your-stripe-secret-key
+
 TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
