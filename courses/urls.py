@@ -13,7 +13,7 @@ urlpatterns = [
     path('payments/success/<int:payment_id>/', payment_success, name='payment_success'),
     path('course/<int:course_id>/', course_detail, name='course_detail'),
     path('payments/', include('payments.urls')),
-    path('list/', course_list, name='course_list'),  # Ensure this line exists
+    path('list/', course_list, name='course_list'),  
     path('course/<int:course_id>/', course_detail, name='course_detail'),  # Added course_id parameter
     path('course/<int:course_id>/enroll/', enroll, name='enroll'),  # Added course_id parameter
     path('dashboard/', user_course_details, name='dashboard'),
