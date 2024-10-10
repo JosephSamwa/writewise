@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-%sj_+9mfzc(n=&@9pi#pf-04pl(=psj8zw_#sqolouc_a@am8y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh', 'https://writewise-w6e7.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh', 'https://writewise-w6e7.onrender.com', 'writewise-w6e7.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
