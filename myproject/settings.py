@@ -17,6 +17,10 @@ CORS_ALLOWED_ORIGINS = [
     # Add more origins if needed
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://writewise-w6e7.onrender.com'
+]
+
 CORS_ALLOW_METHODS = [
     'GET',
     'POST',
