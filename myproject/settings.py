@@ -12,6 +12,20 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh', 'https://writewise-w6e7.onrender.com', 'writewise-w6e7.onrender.com']
 
+CORS_ALLOWED_ORIGINS = [
+    'https://writewise-w6e7.onrender.com',
+    # Add more origins if needed
+]
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'DELETE',
+    'OPTIONS',
+]
+
+
 # Application definition
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',# Add this before 'django.contrib.staticfiles'
@@ -22,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'corsheaders',
     'users',
     'courses',
     'payments',
@@ -39,6 +54,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
